@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="h3 mb-3 font-weight-normal">Modification de votre profil</h1>
+
+        
+        {{ form_start(form, { 'attr': { 'class': 'form-horizontal' } }) }}
+
+        <div class="form-group">
+            <label for="ncli">Numéro Client</label>
+            {{ form_widget(form.ncli, { 'attr': { 'class': 'form-control', 'id': 'ncli' } }) }}
+        </div>
+
+        <div class="form-group">
+            <label for="nom">Nom</label>
+            {{ form_widget(form.nom, { 'attr': { 'class': 'form-control', 'id': 'nom' } }) }}
+        </div>
+
+        <div class="form-group">
+            <label for="adresse">Adresse</label>
+            {{ form_widget(form.adresse, { 'attr': { 'class': 'form-control', 'id': 'adresse' } }) }}
+        </div>
+
+        <div class="form-group">
+            <label for="localite">Localité</label>
+            {{ form_widget(form.localite, { 'attr': { 'class': 'form-control', 'id': 'localite' } }) }}
+        </div>
+
+        <div class="form-group">
+            <label for="cat">Catégorie</label>
+            {{ form_widget(form.cat, { 'attr': { 'class': 'form-control', 'id': 'cat' } }) }}
+        </div>
+
+        <div class="form-group">
+            <label for="compte">Compte</label>
+            {{ form_widget(form.compte, { 'attr': { 'class': 'form-control', 'id': 'compte' } }) }}
+        </div>
+
+        
+        <button class="btn btn-lg btn-primary" type="submit">Modifier</button>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

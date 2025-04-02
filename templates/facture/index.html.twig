@@ -1,0 +1,18 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Sélectionnez une Facture{% endblock %}
+
+{% block body %}
+    <h1 class="mt-5">Sélectionnez une Facture</h1>
+
+    {{ form_start(form, {'attr': {'class': 'form-inline'}}) }}
+        <div class="mb-3">
+            {{ form_row(form.facture, {'attr': {'class': 'form-control'}}) }} 
+        </div>
+        <button type="submit" class="btn btn-primary">Afficher les Détails</button>
+    {{ form_end(form) }}
+
+    
+{% endblock %}
